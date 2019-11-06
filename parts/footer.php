@@ -1,0 +1,5 @@
+<footer>
+        Rodapé do site
+    </footer>
+
+</html>
