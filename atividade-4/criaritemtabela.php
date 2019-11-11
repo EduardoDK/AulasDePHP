@@ -12,6 +12,11 @@ if($resultado->num_rows > 0){
         echo "<td>"  . $linha['nome'] .  "</td>" ;
         echo "<td>" .  $linha['email'] . "</td>";
         echo "<td>".  "<img src='$url'>" . "</td>";
+        echo "<td><a href='listaupdate.php?id=". $linha['id'] . "'>Editar</a> |";
+        echo "<a href='delete.php?id=". $linha['id'] . "'>Apagar</a></td>";
+
+
+        
 
 
         echo "</tr>";

@@ -82,14 +82,15 @@ $conn->close();
                           <th>Nome</th>
                           <th>Email</th>
                           <th style="width: 100px">Foto</th>
+                          <th>Ação</th>
                         </tr>
                       </thead>
                       <tbody>
                         <?php include('criaritemtabela.php') ?>
-                       
-                     
-                     
                       </tbody>
+                      <div class="card-footer">
+                        <a href="cadastro.php">Voltar para o menu Inicial</a>
+                    </div>
                     </table>
                   </div>
                   

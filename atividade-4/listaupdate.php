@@ -1,3 +1,27 @@
+<?php
+
+include('conn.php');
+
+
+$id = $_GET['id'];
+
+
+$sql = "SELECT * FROM pessoa WHERE id ='$id'";
+$resultado = $conn->query($sql);
+
+if($resultado->num_rows  > 0){
+
+    $linhas = true;
+    $linha = $resultado->fetch_assoc();
+
+}else{
+    $linhas = false;
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,21 +80,21 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" action="upload.php" method="post" enctype="multipart/form-data">
+              <form role="form" action="update.php?id=<?php echo $linha['id'] ?>" method="post" enctype="multipart/form-data">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="email">Endereço de Email</label>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Digite seu Email">
+                    <input required  value="<?php echo $linhas?$linha['email']:"" ?>"  type="email" class="form-control" name="email" id="email" placeholder="Digite seu Email">
                   </div>
                   <div class="form-group">
                     <label for="nome">Nome Completo</label>
-                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome Completo">
+                    <input required value="<?php echo $linhas?$linha['nome']:"" ?>"  type="text" class="form-control" id="nome" name="nome" placeholder="Nome Completo">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputFile">Foto do perfil</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file"  name="imagemUpload" class="custom-file-input" id="exampleInputFile"  value="Procurar..." accept="image/png ,image/jpeg" >
+                        <input  required type="file"  name="imagemUpload" class="custom-file-input" id="exampleInputFile"  value="Procurar..." accept="image/png ,image/jpeg" >
                         <label class="custom-file-label" for="exampleInputFile">Escolher uma foto</label>
                       </div>
                       <div class="input-group-append">
@@ -85,9 +109,8 @@
                   <button type="submit" class="btn btn-primary">Salvar</button>
                 </div>
                 <div class="card-footer">
-                  <a href="lista.php">Lista de Usuarios</a>
+                  <a href="lista.php">Voltar para lista</a>
                 </div>
-
               </form>
             </div>
 

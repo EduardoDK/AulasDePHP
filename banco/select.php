@@ -38,6 +38,8 @@ $resultado = $conn->query($sql);
     <tr>
         <th>Nome:</th>
         <th>Sobrenome:</th>
+        <th>Data nascimento:</th>
+        <th>Ação:</th>
     </tr>
     <?php include('criarlinha.php')?>
      
