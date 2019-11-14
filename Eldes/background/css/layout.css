@@ -1,0 +1,56 @@
+body{
+    background-color:white;
+    background-image:url(images/body.jpg);
+    background-repeat:repeat-x;
+}
+div.janela{
+    width:800px;
+    height:600px;
+    margin-left:auto;
+    margin-right:auto;
+    box-shadow: 8px 8px 20px 8px rgba(0,0,0,0.5);
+    background-color:rgba(0,0,0,0.7);
+}
+div.janela-titulo{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    color:#ffea00;
+    text-align:center;
+    font-size:109px;
+
+
+}
+.icone-alerta{
+    display: inline-block;
+    width:109px;
+    height:109px;
+    background-image:url(images/janela-titulo-icone-alerta.png);
+
+}
+.janela-botao{
+    
+    width: 216px;
+    height: 222px;
+    
+    background-color:transparent;
+    border-style:none;
+    background-image:url(images/janela-botao.png);
+    font-size:0px;
+    
+}
+.janela-botao:focus{
+
+    outline-style: none;
+     
+
+}
+.janela-botao:hover{
+    margin:15px;
+}
+.janela-rodape{
+    text-align: center;
+    padding:200px;
+}
+
+
+
