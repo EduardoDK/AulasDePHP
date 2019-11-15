@@ -15,4 +15,4 @@ include('conn.php');
 
  $conn->close();
 
- header("Location: index.php");
+ header("Location: login.php");
