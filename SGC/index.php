@@ -25,6 +25,7 @@ $resultado = $conn->query($sql);
 $sql = "SELECT *FROM postagem ";
 $resultado = $conn->query($sql);
 
+
 ?>
 
 
@@ -64,10 +65,18 @@ $resultado = $conn->query($sql);
         .status{
             font-size:20px;
         }
-        .paragrafo{
-            font-size:20px;
-            display:flex;
-            flex-wrap:wrap;
+        p{
+        
+            font-size:15px;
+            word-wrap:  break-word;
+        }
+        h2{
+            font-size:22px;
+            font-family:courier;
+        }
+        span{
+            color:blue;
+            font-size:15px;
         }
     </style>
 </head>
@@ -89,7 +98,7 @@ $resultado = $conn->query($sql);
         </nav>
     </div>
     <header><h1>Bloguezinho do Pudim</h1></header>
-    <p class="status">Status: <?php echo   $login?> </p>
+   
     <main>  
         <div>
            <?php include('criarlinha.php'); ?>
@@ -97,12 +106,7 @@ $resultado = $conn->query($sql);
         
        
     </main>
-    <?php 
-    if($_SESSION['login'] == "true"){
-        include('post.php');
-    }
-    ?>
-    
+   
 
         
            
